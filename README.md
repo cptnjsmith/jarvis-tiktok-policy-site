@@ -10,7 +10,8 @@ This repository hosts the public Jarvis website and policy pages for TikTok app 
 - OAuth redirect URI: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/callback.html`
 - Review demo page: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/demo.html`
 - App icon SVG: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon.svg`
-- App icon PNG: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon-600.png`
+- App icon PNG, 600 x 600: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon-600.png`
+- App icon PNG, 1024 x 1024: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon-1024.png`
 
 ## TikTok App Review Notes
 
