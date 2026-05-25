@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="Jarvis app icon">
+  <rect width="600" height="600" fill="#111827"/>
+  <rect x="82" y="82" width="436" height="436" rx="64" fill="#0f766e"/>
+  <path d="M324 154v230c0 61-39 96-103 96-38 0-70-12-94-35l43-57c14 13 29 20 47 20 22 0 35-13 35-40V154h72Z" fill="#ffffff"/>
+  <path d="M374 154h78v78h-78zM374 268h78v198h-78z" fill="#ccfbf1"/>
+</svg>

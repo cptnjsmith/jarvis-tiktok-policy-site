@@ -3,32 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jarvis TikTok Callback</title>
+  <title>OAuth Callback | Jarvis</title>
+  <meta name="description" content="Registered OAuth callback page for Jarvis.">
+  <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #111; }
-    h1, h2 { line-height: 1.2; }
-    code, pre { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
-    pre { padding: 12px; overflow: auto; }
-    a { color: #0a58ca; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #111827; line-height: 1.65; }
+    main { width: min(780px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0; }
+    h1 { margin: 0 0 10px; font-size: 42px; line-height: 1.05; letter-spacing: 0; }
+    p, li { color: #374151; }
+    code, pre { background: #f3f4f6; border-radius: 6px; }
+    code { padding: 2px 5px; }
+    pre { padding: 14px; overflow: auto; }
+    a { color: #064e3b; font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     .ok { color: #166534; font-weight: 700; }
   </style>
 </head>
 <body>
-  <h1>Jarvis TikTok Callback</h1>
-  <p class="ok">Authorization response received.</p>
-  <p>This page is the registered redirect target for the Jarvis TikTok integration.</p>
-  <p>After TikTok redirects here, the authorization code and state will appear in the URL. Copy the full callback URL or the <code>code</code> value and return to Jarvis to complete token exchange.</p>
+  <main>
+    <h1>Jarvis OAuth Callback</h1>
+    <p class="ok">Authorization response received.</p>
+    <p>This page is the registered redirect target for Jarvis. After TikTok redirects here, the authorization code and state appear in the URL so the user can complete the token exchange in Jarvis.</p>
 
-  <h2>What to do next</h2>
-  <ol>
-    <li>Copy the full browser address from this page after TikTok redirects you here.</li>
-    <li>Or copy just the <code>code</code> query parameter value.</li>
-    <li>Use that code with the local Jarvis OAuth helper to exchange it for tokens.</li>
-  </ol>
+    <h2>Next Step</h2>
+    <p>Copy the full browser address or the <code>code</code> query parameter and return to the Jarvis OAuth helper.</p>
 
-  <h2>Expected local command</h2>
-  <pre>python3 ai-prompts-small-business/scripts/tiktok_oauth.py exchange-code '&lt;CODE_FROM_CALLBACK&gt;' --write-env</pre>
+    <pre>python3 ai-prompts-small-business/scripts/tiktok_oauth.py exchange-code --callback-url '&lt;FULL_CALLBACK_URL&gt;' --write-env</pre>
 
-  <p><a href="./index.html">Back to policy site</a></p>
+    <p><a href="./index.html">Back to Jarvis</a></p>
+  </main>
 </body>
 </html>

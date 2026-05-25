@@ -3,20 +3,154 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jarvis TikTok Policy Pages</title>
+  <title>Jarvis</title>
+  <meta name="description" content="Jarvis helps creators prepare, review, and submit short-form video posts for their own TikTok account.">
+  <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #111; }
-    h1, h2 { line-height: 1.2; }
-    a { color: #0a58ca; }
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #d7dde6;
+      --panel: #f7f9fc;
+      --accent: #0f766e;
+      --accent-ink: #064e3b;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header, main, footer { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 800;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    a { color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero { padding: 54px 0 38px; max-width: 820px; }
+    h1 { margin: 0 0 14px; font-size: clamp(36px, 7vw, 68px); line-height: .98; letter-spacing: 0; }
+    h2 { margin: 0 0 10px; font-size: 24px; line-height: 1.2; }
+    p { margin: 0 0 16px; }
+    .lede { font-size: 20px; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 18px 0 48px;
+    }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--panel);
+    }
+    .item strong { display: block; margin-bottom: 6px; }
+    .section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .step {
+      border-left: 4px solid var(--accent);
+      padding: 4px 0 4px 14px;
+      color: var(--muted);
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 28px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 760px) {
+      header, footer { align-items: flex-start; flex-direction: column; }
+      .grid, .steps { grid-template-columns: 1fr; }
+      .hero { padding-top: 34px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Jarvis TikTok Policy Pages</h1>
-  <p>This site hosts the public policy pages used for TikTok developer app setup.</p>
-  <ul>
-    <li><a href="./terms.html">Terms of Service</a></li>
-    <li><a href="./privacy.html">Privacy Policy</a></li>
-    <li><a href="./callback.html">OAuth Callback Page</a></li>
-  </ul>
+  <header>
+    <div class="brand"><span class="mark">J</span><span>Jarvis</span></div>
+    <nav aria-label="Primary">
+      <a href="./terms.html">Terms</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./demo.html">Review demo</a>
+      <a href="./callback.html">OAuth callback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Jarvis</h1>
+      <p class="lede">Jarvis helps a creator prepare, review, and submit short-form video posts for their own connected TikTok account.</p>
+      <p>The service is built around explicit user authorization: the account owner connects TikTok, reviews the selected media and caption, then intentionally submits the post workflow.</p>
+    </section>
+
+    <section class="grid" aria-label="Service summary">
+      <div class="item">
+        <strong>Account owner controlled</strong>
+        <span>Jarvis is used by the authorized account owner for their own creator or business posting workflow.</span>
+      </div>
+      <div class="item">
+        <strong>Review before submit</strong>
+        <span>Media, captions, privacy choices, and submission details are shown before the final action.</span>
+      </div>
+      <div class="item">
+        <strong>Platform-aware posting</strong>
+        <span>The integration uses TikTok authorization and Content Posting API capabilities only for approved posting tasks.</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How Jarvis Works</h2>
+      <p>Jarvis keeps the posting flow simple and auditable. A user connects their own account, selects a prepared video asset, enters or confirms the caption, checks posting options, and submits the final publishing action.</p>
+      <div class="steps">
+        <div class="step">Connect TikTok through the official authorization flow.</div>
+        <div class="step">Prepare a video post with user-selected media and caption text.</div>
+        <div class="step">Review account capability, posting options, and content details.</div>
+        <div class="step">Submit or test the post through the approved integration.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Policies and Review Materials</h2>
+      <p>The Terms of Service and Privacy Policy are publicly available here and linked from the main website without a menu. Reviewers can also open the demo page to see the intended user interface sequence.</p>
+      <p><a href="./terms.html">Read the Terms of Service</a> · <a href="./privacy.html">Read the Privacy Policy</a> · <a href="./demo.html">Open the review demo page</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Jarvis</span>
+    <span>Support: <a href="https://github.com/cptnjsmith/jarvis-tiktok-policy-site/issues">GitHub issue tracker</a></span>
+  </footer>
 </body>
 </html>

@@ -3,35 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of Service</title>
+  <title>Terms of Service | Jarvis</title>
+  <meta name="description" content="Terms of Service for Jarvis.">
+  <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #111; }
-    h1, h2 { line-height: 1.2; }
-    a { color: #0a58ca; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #111827; line-height: 1.65; }
+    header, main, footer { width: min(860px, calc(100% - 40px)); margin: 0 auto; }
+    header, footer { display: flex; justify-content: space-between; gap: 16px; padding: 24px 0; border-bottom: 1px solid #d7dde6; }
+    footer { border-top: 1px solid #d7dde6; border-bottom: 0; color: #4b5563; font-size: 14px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    a { color: #064e3b; font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main { padding: 42px 0; }
+    h1 { margin: 0 0 8px; font-size: 44px; line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 30px 0 8px; font-size: 22px; line-height: 1.25; }
+    p, li { color: #374151; }
+    .updated { color: #6b7280; }
+    @media (max-width: 680px) { header, footer { flex-direction: column; } h1 { font-size: 36px; } }
   </style>
 </head>
 <body>
-  <h1>Terms of Service</h1>
-  <p>Last updated: March 29, 2026</p>
+  <header>
+    <strong><a href="./index.html">Jarvis</a></strong>
+    <nav aria-label="Primary">
+      <a href="./terms.html">Terms</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./demo.html">Review demo</a>
+    </nav>
+  </header>
 
-  <p>These Terms of Service govern use of the Jarvis TikTok posting integration and related policy pages.</p>
+  <main>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: May 25, 2026</p>
 
-  <h2>Use of Service</h2>
-  <p>This service is intended to help an authorized account owner prepare and publish content to TikTok using approved developer access and user authorization.</p>
+    <p>These Terms of Service govern use of Jarvis, a creator assistant that helps an authorized user prepare, review, and submit short-form video posts for their own connected TikTok account.</p>
 
-  <h2>User Responsibility</h2>
-  <p>You are responsible for any content you publish, including compliance with TikTok platform rules, intellectual property rights, disclosure obligations, and applicable laws.</p>
+    <h2>Use of Jarvis</h2>
+    <p>Jarvis is intended for account-owner controlled content workflows. Users must connect their own account, choose or approve the content being prepared, and intentionally trigger any final submit or publish action.</p>
 
-  <h2>No Guarantee of Availability</h2>
-  <p>This service may change, be interrupted, or be discontinued at any time. Access may also be limited by third-party platform policies or API restrictions.</p>
+    <h2>User Responsibilities</h2>
+    <p>Users are responsible for the content they prepare or publish, including compliance with TikTok policies, intellectual property rights, advertising and disclosure requirements, privacy obligations, and applicable law.</p>
 
-  <h2>Third-Party Platforms</h2>
-  <p>Use of TikTok-related functionality is also subject to TikTok’s own terms, policies, and developer requirements.</p>
+    <h2>Third-Party Platforms</h2>
+    <p>TikTok-related functionality is subject to TikTok terms, developer policies, API limits, review requirements, and platform availability. Jarvis does not control TikTok and cannot guarantee approval, uninterrupted access, or specific publishing outcomes.</p>
 
-  <h2>Limitation of Liability</h2>
-  <p>This service is provided on an “as is” basis without warranties of any kind. To the fullest extent permitted by law, the operator is not liable for indirect, incidental, or consequential damages arising from use of the service.</p>
+    <h2>Account Authorization</h2>
+    <p>Users may revoke TikTok authorization through TikTok account settings. If authorization is revoked, TikTok posting features in Jarvis may stop working until the user reconnects the account.</p>
 
-  <h2>Contact</h2>
-  <p>If you need to contact the operator regarding these terms, use the support/contact method associated with the service owner’s public business presence.</p>
+    <h2>Acceptable Use</h2>
+    <p>Users may not use Jarvis to submit unlawful, infringing, deceptive, abusive, spam, or otherwise prohibited content. Jarvis may be changed, suspended, or discontinued if needed for security, legal, operational, or platform-compliance reasons.</p>
+
+    <h2>No Warranty</h2>
+    <p>Jarvis is provided on an "as is" and "as available" basis without warranties of any kind. To the fullest extent permitted by law, the operator is not liable for indirect, incidental, consequential, or special damages arising from use of the service.</p>
+
+    <h2>Contact</h2>
+    <p>For support or terms questions, contact Jarvis through the <a href="https://github.com/cptnjsmith/jarvis-tiktok-policy-site/issues">public support issue tracker</a>.</p>
+  </main>
+
+  <footer>
+    <span>Jarvis</span>
+    <span><a href="./index.html">Website</a> · <a href="./privacy.html">Privacy Policy</a></span>
+  </footer>
 </body>
 </html>

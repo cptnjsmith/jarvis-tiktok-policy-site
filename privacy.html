@@ -3,42 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy</title>
+  <title>Privacy Policy | Jarvis</title>
+  <meta name="description" content="Privacy Policy for Jarvis.">
+  <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #111; }
-    h1, h2 { line-height: 1.2; }
-    a { color: #0a58ca; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #111827; line-height: 1.65; }
+    header, main, footer { width: min(860px, calc(100% - 40px)); margin: 0 auto; }
+    header, footer { display: flex; justify-content: space-between; gap: 16px; padding: 24px 0; border-bottom: 1px solid #d7dde6; }
+    footer { border-top: 1px solid #d7dde6; border-bottom: 0; color: #4b5563; font-size: 14px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    a { color: #064e3b; font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main { padding: 42px 0; }
+    h1 { margin: 0 0 8px; font-size: 44px; line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 30px 0 8px; font-size: 22px; line-height: 1.25; }
+    p, li { color: #374151; }
+    .updated { color: #6b7280; }
+    @media (max-width: 680px) { header, footer { flex-direction: column; } h1 { font-size: 36px; } }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: March 29, 2026</p>
+  <header>
+    <strong><a href="./index.html">Jarvis</a></strong>
+    <nav aria-label="Primary">
+      <a href="./terms.html">Terms</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./demo.html">Review demo</a>
+    </nav>
+  </header>
 
-  <p>This Privacy Policy describes how the Jarvis TikTok posting integration may collect, use, and store limited information necessary to support TikTok authorization and content posting workflows.</p>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 25, 2026</p>
 
-  <h2>Information We May Collect</h2>
-  <ul>
-    <li>Basic account information returned by TikTok after authorization</li>
-    <li>Access tokens and related authorization metadata</li>
-    <li>Content metadata required to prepare or submit posts</li>
-  </ul>
+    <p>This Privacy Policy explains how Jarvis handles information when a user connects their own TikTok account and uses Jarvis to prepare, review, and submit short-form video posts.</p>
 
-  <h2>How Information Is Used</h2>
-  <p>Information is used only to support authorized TikTok posting workflows, account connection, content preparation, and related operational tasks.</p>
+    <h2>Information Jarvis May Process</h2>
+    <ul>
+      <li>Basic account information returned by TikTok after the user authorizes Jarvis.</li>
+      <li>OAuth access tokens, refresh tokens, open ID values, scopes, token expiry times, and related authorization metadata.</li>
+      <li>Creator posting capability information returned by TikTok, such as available privacy levels or posting limits.</li>
+      <li>Video file references, captions, posting options, publish identifiers, and status responses needed to prepare or submit content.</li>
+      <li>Operational logs needed to troubleshoot authorization, upload, or publishing issues.</li>
+    </ul>
 
-  <h2>Sharing of Information</h2>
-  <p>Information is not sold. Information may be shared only as necessary to interact with TikTok services or to comply with legal obligations.</p>
+    <h2>How Information Is Used</h2>
+    <p>Jarvis uses this information only to provide the user-authorized TikTok posting workflow: account connection, creator capability checks, content preparation, upload initialization, upload handling, publish submission, and publish status checks.</p>
 
-  <h2>Data Retention</h2>
-  <p>Information is retained only as long as reasonably necessary for operational use, security, compliance, or troubleshooting.</p>
+    <h2>Sharing of Information</h2>
+    <p>Jarvis does not sell personal information. Information is shared with TikTok only as needed to operate the authorized integration, or when required to comply with law, security obligations, or platform requirements.</p>
 
-  <h2>Security</h2>
-  <p>Reasonable steps are taken to protect stored credentials and related account information, but no system can be guaranteed perfectly secure.</p>
+    <h2>Retention</h2>
+    <p>Jarvis retains authorization and posting workflow information only as long as reasonably needed for operation, troubleshooting, audit, security, and compliance. Users may revoke TikTok authorization at any time through TikTok account settings or by discontinuing use of Jarvis.</p>
 
-  <h2>Your Choices</h2>
-  <p>You may revoke TikTok authorization or discontinue use of the integration at any time, subject to platform rules and any retained compliance obligations.</p>
+    <h2>Security</h2>
+    <p>Jarvis is designed to keep credentials and account information limited to the authorized workflow. No internet-connected system can be guaranteed perfectly secure, but reasonable safeguards are used to limit access to credentials and posting data.</p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, use the support/contact method associated with the service owner’s public business presence.</p>
+    <h2>User Choices</h2>
+    <p>Users control whether to connect their TikTok account, what content to prepare, and whether to submit a post. Users can revoke access in TikTok and request support through the contact method below.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions or access requests, contact Jarvis support through the <a href="https://github.com/cptnjsmith/jarvis-tiktok-policy-site/issues">public support issue tracker</a>.</p>
+  </main>
+
+  <footer>
+    <span>Jarvis</span>
+    <span><a href="./index.html">Website</a> · <a href="./terms.html">Terms of Service</a></span>
+  </footer>
 </body>
 </html>
