@@ -12,6 +12,7 @@ This repository hosts the public Jarvis website and policy pages for TikTok app 
 - App icon SVG: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon.svg`
 - App icon PNG, 600 x 600: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon-600.png`
 - App icon PNG, 1024 x 1024: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/app-icon-1024.png`
+- Supplemental review demo MP4: `https://cptnjsmith.github.io/jarvis-tiktok-policy-site/jarvis-tiktok-review-demo-compatible.mp4`
 
 ## TikTok App Review Notes
 
