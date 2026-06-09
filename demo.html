@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Review Demo | Jarvis</title>
-  <meta name="description" content="Reviewer-facing Jarvis demo flow for TikTok app review.">
+  <title>Jarvis Review Demo</title>
+  <meta name="description" content="Reviewer-facing Jarvis demo flow for app review.">
+  <link rel="icon" href="./app-icon-1024.png" type="image/png">
   <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -21,6 +22,8 @@
     header, main, footer { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
     header, footer { display: flex; justify-content: space-between; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); }
     footer { border-top: 1px solid var(--line); border-bottom: 0; color: var(--muted); font-size: 14px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; }
+    .brand img { width: 40px; height: 40px; border-radius: 8px; display: block; }
     nav { display: flex; flex-wrap: wrap; gap: 16px; }
     a { color: #064e3b; font-weight: 700; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -56,6 +59,7 @@
     .step-button.active { border-color: var(--accent); box-shadow: 0 0 0 3px #ccfbf1; }
     .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .field, .result { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fff; }
+    .review-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 18px 0 26px; }
     .label { color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
     textarea { width: 100%; min-height: 110px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font: inherit; resize: vertical; }
     .video-box { display: grid; place-items: center; min-height: 190px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(135deg, #ecfeff, #f8fafc); color: var(--muted); text-align: center; padding: 18px; }
@@ -65,14 +69,17 @@
     .hidden { display: none; }
     @media (max-width: 840px) {
       header, footer { flex-direction: column; }
-      .layout, .demo-grid { grid-template-columns: 1fr; }
+      .layout, .demo-grid, .review-list { grid-template-columns: 1fr; }
       h1 { font-size: 36px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <strong><a href="./index.html">Jarvis</a></strong>
+    <a class="brand" href="./index.html" aria-label="Jarvis home">
+      <img src="./app-icon-1024.png" alt="Jarvis app icon">
+      <span>Jarvis</span>
+    </a>
     <nav aria-label="Primary">
       <a href="./terms.html">Terms</a>
       <a href="./privacy.html">Privacy</a>
@@ -81,9 +88,29 @@
   </header>
 
   <main>
-    <h1>Review Demo</h1>
+    <h1>Jarvis Review Demo</h1>
     <p>This page gives reviewers a clear UI walkthrough of the Jarvis TikTok posting flow: connect account, check creator capability, prepare content, submit, and check status.</p>
     <p class="note">For TikTok review, the submitted demo video should show this Jarvis UI, the real sandbox authorization screen, the final user submit action, and the returned posting status.</p>
+
+    <section class="review-list" aria-label="Selected products and scopes">
+      <div class="result">
+        <span class="label">Selected product</span>
+        <strong>Content Posting API</strong>
+        <p>Demonstrated through upload initialization, user review, publish submission, and status fetch.</p>
+      </div>
+      <div class="result">
+        <span class="label">Selected scopes</span>
+        <ul>
+          <li>user.info.basic</li>
+          <li>video.upload</li>
+          <li>video.publish</li>
+        </ul>
+      </div>
+      <div class="result">
+        <span class="label">Sandbox demo mode</span>
+        <p>The flow below uses reviewer-safe sandbox/mock responses to show the complete end-to-end integration without publishing real content.</p>
+      </div>
+    </section>
 
     <div class="layout">
       <aside class="panel">
@@ -189,13 +216,19 @@
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-        const step = button.dataset.step;
-        views.forEach((view) => view.classList.toggle('hidden', view.id !== step));
-        buttons.forEach((item) => item.classList.toggle('active', item === button));
-        title.textContent = labels[step][0];
-        badge.textContent = labels[step][1];
+        showStep(button.dataset.step);
       });
     });
+
+    function showStep(step) {
+      const normalizedStep = labels[step] ? step : 'connect';
+      views.forEach((view) => view.classList.toggle('hidden', view.id !== normalizedStep));
+      buttons.forEach((item) => item.classList.toggle('active', item.dataset.step === normalizedStep));
+      title.textContent = labels[normalizedStep][0];
+      badge.textContent = labels[normalizedStep][1];
+    }
+
+    showStep(window.location.hash.replace('#', ''));
 
     document.querySelector('#submit-demo').addEventListener('click', () => {
       document.querySelector('#submit-result').classList.remove('hidden');

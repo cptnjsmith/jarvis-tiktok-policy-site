@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jarvis</title>
   <meta name="description" content="Jarvis helps creators and small businesses prepare, review, and submit short-form video posts for connected TikTok accounts.">
+  <link rel="icon" href="./app-icon-1024.png" type="image/png">
   <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -34,17 +35,8 @@
       padding: 24px 0;
       border-bottom: 1px solid var(--line);
     }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
-    .mark {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: var(--ink);
-      color: #fff;
-      font-weight: 800;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; color: var(--ink); }
+    .brand img { width: 40px; height: 40px; border-radius: 8px; display: block; }
     nav { display: flex; flex-wrap: wrap; gap: 16px; }
     a { color: var(--accent-ink); font-weight: 700; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -99,7 +91,7 @@
 </head>
 <body>
   <header>
-    <div class="brand"><span class="mark">J</span><span>Jarvis</span></div>
+    <a class="brand" href="./index.html" aria-label="Jarvis home"><img src="./app-icon-1024.png" alt="Jarvis app icon"><span>Jarvis</span></a>
     <nav aria-label="Primary">
       <a href="./terms.html">Terms</a>
       <a href="./privacy.html">Privacy</a>
@@ -150,7 +142,7 @@
 
   <footer>
     <span>Jarvis</span>
-    <span>Support: <a href="https://github.com/cptnjsmith/jarvis-tiktok-policy-site/issues">GitHub issue tracker</a></span>
+    <span>Support: <a href="https://github.com/cptnjsmith">cptnjsmith on GitHub</a></span>
   </footer>
 </body>
 </html>
